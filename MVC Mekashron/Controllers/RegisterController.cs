@@ -7,11 +7,13 @@ namespace MVC_Mekashron.Controllers
     public class RegisterController : Controller
     {
         [HttpPost]
-        public async Task<IActionResult> Index(LoginRequest loginRequest)
+        public async Task<IActionResult> Index(string email, string password, string firstName, string lastName, string mobile)
         {
-            var client = new ICUTechServiceReference.ICUTechClient();
-            //var rawResponse = await client.LoginAsync(username, password, "");
-            //ViewBag.ResponseData = JsonConvert.DeserializeObject(rawResponse.@return);
+            ViewBag.IsDeveloperMode = true;
+         
+            var client = new ICUTechClient();
+            var rawResponse = await client.RegisterNewCustomerAsync(email, password, firstName, lastName, mobile, 0, 0, "");
+            ViewBag.ResponseData = JsonConvert.DeserializeObject(rawResponse.@return);
 
             return View();
         }
