@@ -8,7 +8,7 @@
 }
 
 
-<div class="col-5 align-center  ">
+<div class="col-sm-8 col-lg-4 align-center  ">
     <div class="card p-3">
         <form method="post">
             <div class="form-group">
@@ -27,7 +27,7 @@
         <div class="mt-2">
             @if (ViewBag.ResponseData != null)
             {
-                @if (ViewBag.ResponseData.ResultCode != 1)
+                @if (ViewBag.ResponseData.EntityId == null)
                 {
                     <div class="alert alert-danger" role="alert">
                         Something went drastically wrong :(
@@ -38,7 +38,7 @@
                     </div>
                 }
 
-                @if (ViewBag.IsDeveloperMode || ViewBag.ResponseData.ResultCode == 1)
+                @if (ViewBag.IsDeveloperMode || ViewBag.ResponseData.EntityId != null)
                 {
                     <h5>Response:</h5>
                     <pre>@Html.Raw(ViewBag.ResponseData)</pre>
