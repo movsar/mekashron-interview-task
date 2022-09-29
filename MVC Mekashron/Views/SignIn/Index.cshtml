@@ -25,10 +25,24 @@
         </form>
 
         <div class="mt-2">
-            @if (ViewData["ResponseData"] != null)
+            @if (ViewBag.ResponseData != null)
             {
-                <h5>Response:</h5>
-                <pre>@Html.Raw(ViewData["ResponseData"] as JObject)</pre>
+                @if (ViewBag.ResponseData.ResultCode == -1)
+                {
+                    <div class="alert alert-danger" role="alert">
+                        Something went drastically wrong :(
+                    </div>
+                } else {
+                    <div class="alert alert-success" role="alert">
+                        Welcome @ViewBag.ResponseData.FirstName!
+                    </div>
+                }
+
+                @if (ViewBag.IsDeveloperMode || ViewBag.ResponseData.ResultCode != -1)
+                {
+                    <h5>Response:</h5>
+                    <pre>@Html.Raw(ViewBag.ResponseData)</pre>
+                }
             }
 
         </div>

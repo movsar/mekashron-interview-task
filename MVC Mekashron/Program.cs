@@ -28,7 +28,7 @@ namespace MVC_Mekashron
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=SignIn}/{action=Index}");
 
             app.Run();
         }
