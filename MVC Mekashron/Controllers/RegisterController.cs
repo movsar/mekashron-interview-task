@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace MVC_Mekashron.Controllers
+namespace MVC_Mek.Controllers
 {
     public class RegisterController : Controller
     {

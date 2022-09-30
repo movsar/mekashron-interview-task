@@ -1,4 +1,4 @@
-namespace MVC_Mekashron
+namespace MVC_Mek
 {
     public class Program
     {

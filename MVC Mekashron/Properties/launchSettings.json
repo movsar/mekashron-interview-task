@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "MVC_Mekashron": {
+    "MVC_Mek": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

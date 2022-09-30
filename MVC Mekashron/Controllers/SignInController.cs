@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
 
-namespace MVC_Mekashron.Controllers
+namespace MVC_Mek.Controllers
 {
     public class SignInController : Controller
     {

@@ -1,4 +1,4 @@
-namespace MVC_Mekashron.Models
+namespace MVC_Mek.Models
 {
     public class ErrorViewModel
     {
