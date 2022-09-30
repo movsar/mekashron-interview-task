@@ -15,6 +15,7 @@ namespace MVC_Mekashron
             if (!app.Environment.IsDevelopment())
             {
                 app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
             }
 
             app.UseHttpsRedirection();
